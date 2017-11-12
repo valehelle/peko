@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171112090350) do
+ActiveRecord::Schema.define(version: 20171112094253) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20171112090350) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.float "lat"
-    t.float "lng"
+    t.float "latitude"
+    t.float "longitude"
     t.integer "user_id"
     t.string "question"
     t.integer "view_count"
