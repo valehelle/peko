@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lat: 1.5
+  lng: 1.5
+  user: one
+  question: MyString
+  view_count: 
+  location: MyString
+  comment_count: 
+
+two:
+  lat: 1.5
+  lng: 1.5
+  user: two
+  question: MyString
+  view_count: 
+  location: MyString
+  comment_count: 
