@@ -18,6 +18,14 @@ class PostController < ApplicationController
         render json: post.to_json()
     end
 
+    def find
+        query = params[:query]
+        latitude = params[:latitude]
+        longitude = params[:longitude]
+        posts = Post.search(query).records.near([latitude,longitude], 30, :units => :km)
+        render json: posts.to_json(:only => [:id, :question, :address, :created_at], :include => { :user => {:only => :nickname}})
+    end
+
     private
     def post_params
         params.permit(:question, :latitude, :longitude)
